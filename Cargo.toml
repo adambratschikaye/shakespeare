@@ -1,4 +1,3 @@
 [workspace]
-members = [
-    "src/shakespeare_backend",
-]
+resolver = "2"
+members = ["src/shakespeare_backend"]
