@@ -1,22 +1,19 @@
 # Setup
-# Install old version
-# DFX_VERSION=0.15.3 sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+# Install dfxvm
+# sh -ci "$(curl -fsSL https://raw.githubusercontent.com/dfinity/sdk/dfxvm-install-script/install.sh)"
 
-# move it here
-# cp ~/bin/dfx dfx-15
+# install 0.16.0 beta
+# dfxvm install 0.16.0-beta.0
+# dfxvm default 0.16.0-beta.0
 
-# Install the beta release
-# DFX_VERSION=0.16.0-beta.0 sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
-
-dfx start --background --clean --host 127.0.0.1:4949
+dfx start --background --clean 
 
 # Show code includes complete works
 
 # Show dfx.json includes the gzip option
 
-./dfx-15 --version # Without support
-./dfx-15 deploy --no-wallet # Will get size error
+dfx +0.15.3 deploy --no-wallet # Will get size error
 
-dfx --version # New version
+dfx --version # default is 0.16.0 beta
 dfx deploy --no-wallet # Succeeds
 dfx canister call shakespeare_backend line
