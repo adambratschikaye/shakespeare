@@ -3,16 +3,8 @@
     "shakespeare_backend": {
       "candid": "src/shakespeare_backend/shakespeare_backend.did",
       "package": "shakespeare_backend",
-      "type": "rust"
-    },
-    "shakespeare_frontend": {
-      "dependencies": [
-        "shakespeare_backend"
-      ],
-      "source": [
-        "src/shakespeare_frontend/assets"
-      ],
-      "type": "assets"
+      "type": "rust",
+      "gzip": true
     }
   },
   "defaults": {
